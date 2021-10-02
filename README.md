@@ -13,6 +13,17 @@ There are many ways to implement a design system, this project aims to discover 
 `npx create-react-app`
 `yarn add @stitches/react`
 
+Files I will not be using:
+
+- App.css
+- App.test.js
+- index.css
+- logo.svg
+- reportWebVitals.js
+- setupTests.js
+
 ### Configuration
 
 `stitches.config.ts`
+
+### Customization
