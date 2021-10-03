@@ -6,10 +6,11 @@ const Container = styled('div', {
   backgroundColor: '$pink',
 });
 
-const Button = styled('div', {
-  backgroundColor: '$red',
-  color: '$white',
-  borderRadius: '$round',
+const Button = styled('button', {
+  fontFamily: '$sans',
+  appearance: 'none',
+  border: 'none',
+  backgroundColor: '$turq',
 });
 
 const App = () => {
