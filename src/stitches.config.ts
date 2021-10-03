@@ -1,20 +1,27 @@
 import { createStitches } from '@stitches/react';
+import { gray, blue, red, green } from '@radix-ui/colors';
 
-export const { styled } = createStitches({
+export const {
+  styled,
+  css,
+  globalCss,
+  keyframes,
+  getCssText,
+  theme,
+  createTheme,
+  config,
+} = createStitches({
   theme: {
     colors: {
-      black: 'rgba(19, 19, 21, 1)',
-      white: 'rgba(255, 255, 255, 1)',
-      gray: 'rgba(128, 128, 128, 1)',
-      blue: 'rgba(3, 136, 252, 1)',
-      red: 'rgba(249, 16, 74, 1)',
-      yellow: 'rgba(255, 221, 0, 1)',
-      pink: 'rgba(232, 141, 163, 1)',
-      turq: 'rgba(0, 245, 196, 1)',
-      orange: 'rgba(255, 135, 31, 1)',
+      ...gray,
+      ...blue,
+      ...red,
+      ...green,
     },
     fonts: {
-      sans: 'Inter, sans-serif',
+      $untitled:
+        'Untitled Sans, -apple-system, system-ui, sans-serif',
+      $mono: 'Söhne Mono, menlo, monospace',
     },
     fontSizes: {
       1: '12px',
@@ -54,5 +61,100 @@ export const { styled } = createStitches({
     shadows: {},
     zIndices: {},
     transitions: {},
+  },
+  media: {
+    bp1: '(min-width: 640px)',
+    bp2: '(min-width: 768px)',
+    bp3: '(min-width: 1024px)',
+  },
+  utils: {
+    p: (value: any) => ({
+      paddingTop: value,
+      paddingBottom: value,
+      paddingLeft: value,
+      paddingRight: value,
+    }),
+    pt: (value: any) => ({
+      paddingTop: value,
+    }),
+    pr: (value: any) => ({
+      paddingRight: value,
+    }),
+    pb: (value: any) => ({
+      paddingBottom: value,
+    }),
+    pl: (value: any) => ({
+      paddingLeft: value,
+    }),
+    px: (value: any) => ({
+      paddingLeft: value,
+      paddingRight: value,
+    }),
+    py: (value: any) => ({
+      paddingTop: value,
+      paddingBottom: value,
+    }),
+
+    m: (value: any) => ({
+      marginTop: value,
+      marginBottom: value,
+      marginLeft: value,
+      marginRight: value,
+    }),
+    mt: (value: any) => ({
+      marginTop: value,
+    }),
+    mr: (value: any) => ({
+      marginRight: value,
+    }),
+    mb: (value: any) => ({
+      marginBottom: value,
+    }),
+    ml: (value: any) => ({
+      marginLeft: value,
+    }),
+    mx: (value: any) => ({
+      marginLeft: value,
+      marginRight: value,
+    }),
+    my: (value: any) => ({
+      marginTop: value,
+      marginBottom: value,
+    }),
+
+    ta: (value: any) => ({ textAlign: value }),
+
+    fd: (value: any) => ({ flexDirection: value }),
+    fw: (value: any) => ({ flexWrap: value }),
+
+    ai: (value: any) => ({ alignItems: value }),
+    ac: (value: any) => ({ alignContent: value }),
+    jc: (value: any) => ({ justifyContent: value }),
+    as: (value: any) => ({ alignSelf: value }),
+    fg: (value: any) => ({ flexGrow: value }),
+    fs: (value: any) => ({ flexShrink: value }),
+    fb: (value: any) => ({ flexBasis: value }),
+
+    bs: (value: any) => ({ boxShadow: value }),
+
+    lh: (value: any) => ({ lineHeight: value }),
+
+    ox: (value: any) => ({ overflowX: value }),
+    oy: (value: any) => ({ overflowY: value }),
+
+    pe: (value: any) => ({ pointerEvents: value }),
+    us: (value: any) => ({ userSelect: value }),
+
+    linearGradient: (value: any) => ({
+      backgroundImage: `linear-gradient(${value})`,
+    }),
+    size: (value: any) => ({
+      width: value,
+      height: value,
+    }),
+
+    br: (value: any) => ({
+      borderRadius: value,
+    }),
   },
 });
