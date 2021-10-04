@@ -1,33 +1,44 @@
-import React from 'react';
-
-import { styled } from './stitches.config';
+import React, { useState } from 'react';
+import { newTheme, styled } from './stitches.config';
+import { Button } from './components/Button';
 
 const Container = styled('div', {
-  display: 'flex',
-  backgroundColor: '$gray5',
+  minHeight: '100vh',
+  backgroundColor: '$slate5',
   maxWidth: '480px',
   mx: 'auto',
-  minHeight: '100%',
 });
 
-const Button = styled('button', {
-  appearance: 'none',
-  border: 'none',
-  backgroundColor: 'transparent',
-  fontSize: '$1',
-});
-
-const Box = styled('div', {
-  size: '200px',
-  linearGradient: '19deg, #21D4FD 0%, #B721FF 100%',
-  br: '$round',
+const ColumnDiv = styled('div', {
+  backgroundColor: '$cyan4',
 });
 
 const App = () => {
+  const [isNew, setIsNew] = useState(true);
+  const switchTheme = isNew ? '' : newTheme;
+
   return (
-    <Container>
-      <Box>hello, welcome to my app!</Box>
-      <Button>Button</Button>
+    <Container className={switchTheme}>
+      <ColumnDiv
+        css={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%',
+        }}
+      >
+        <Button
+          size='lg'
+          variant='primary'
+          onClick={() => setIsNew(!isNew)}
+        >
+          Theme Switch
+        </Button>
+        <Button size='lg' variant='secondary'>
+          Button
+        </Button>
+      </ColumnDiv>
     </Container>
   );
 };
