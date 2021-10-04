@@ -1,25 +1,47 @@
 import React, { useState } from 'react';
-import { newTheme, styled } from './stitches.config';
+import {
+  sandTheme,
+  darkTheme,
+  styled,
+  theme,
+} from './stitches.config';
 import { Button } from './components/Button';
 
-const Container = styled('div', {
+const RootContainer = styled('div', {
   minHeight: '100vh',
-  backgroundColor: '$slate5',
+  backgroundColor: '$bg200',
   maxWidth: '480px',
   mx: 'auto',
 });
 
-const ColumnDiv = styled('div', {
-  backgroundColor: '$cyan4',
+const Container = styled('div', {
+  backgroundColor: '$primary600',
 });
 
+const THEME = {
+  0: theme,
+  1: sandTheme,
+  2: darkTheme,
+};
+
 const App = () => {
-  const [isNew, setIsNew] = useState(true);
-  const switchTheme = isNew ? '' : newTheme;
+  const [pageTheme, setPageTheme] = useState(0);
+
+  const changeTheme = () => {
+    if (pageTheme === 0) {
+      setPageTheme(1);
+    }
+    if (pageTheme === 1) {
+      setPageTheme(2);
+    }
+    if (pageTheme === 2) {
+      setPageTheme(0);
+    }
+  };
 
   return (
-    <Container className={switchTheme}>
-      <ColumnDiv
+    <RootContainer className={THEME[pageTheme]}>
+      <Container
         css={{
           display: 'flex',
           flexDirection: 'column',
@@ -28,18 +50,14 @@ const App = () => {
           height: '100%',
         }}
       >
-        <Button
-          size='lg'
-          variant='primary'
-          onClick={() => setIsNew(!isNew)}
-        >
+        <Button size='lg' variant='primary' onClick={changeTheme}>
           Theme Switch
         </Button>
         <Button size='lg' variant='secondary'>
           Button
         </Button>
-      </ColumnDiv>
-    </Container>
+      </Container>
+    </RootContainer>
   );
 };
 

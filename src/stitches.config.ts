@@ -32,6 +32,7 @@ export const {
       ...indigo,
       ...blue,
       ...sky,
+
       // app backgrounds
       bg100: '$slate1',
       bg200: '$slate2',
@@ -181,6 +182,7 @@ export const sandTheme = createTheme('sand-theme', {
     ...yellow,
     ...amber,
     ...orange,
+
     // app backgrounds
     bg100: '$sand1',
     bg200: '$sand2',
@@ -239,54 +241,55 @@ export const darkTheme = createTheme('dark-theme', {
     ...crimsonDark,
     ...plumDark,
     ...violetDark,
+
     // app backgrounds
-    bg100: '$mauveDark1',
-    bg200: '$mauveDark2',
+    bg100: '$mauve1',
+    bg200: '$mauve2',
 
     // normal, hover, pressed states
     // scale to 4 -> 5 -> 6 if CTA
-    primary300: '$crimsonDark3',
-    primary400: '$crimsonDark4',
-    primary500: '$crimsonDark5',
+    primary300: '$crimson3',
+    primary400: '$crimson4',
+    primary500: '$crimson5',
 
     // border colors: disabled, interactive, and hover
-    primary600: '$crimsonDark6',
-    primary700: '$crimsonDark7',
-    primary800: '$crimsonDark8',
+    primary600: '$crimson6',
+    primary700: '$crimson7',
+    primary800: '$crimson8',
 
     // solid background + hover state
-    primary900: '$crimsonDark9',
-    primary1000: '$crimsonDark10',
+    primary900: '$crimson9',
+    primary1000: '$crimson10',
 
     // low contrast and high contrast text
-    lowContrastText: '$mauveDark11',
-    highContrastText: '$mauveDark12',
+    lowContrastText: '$mauve11',
+    highContrastText: '$mauve12',
 
-    secondary300: '$plumDark3',
-    secondary400: '$plumDark4',
-    secondary500: '$plumDark5',
-    secondary600: '$plumDark6',
-    secondary700: '$plumDark7',
-    secondary800: '$plumDark8',
-    secondary900: '$plumDark9',
-    secondary1000: '$plumDark10',
+    secondary300: '$plum3',
+    secondary400: '$plum4',
+    secondary500: '$plum5',
+    secondary600: '$plum6',
+    secondary700: '$plum7',
+    secondary800: '$plum8',
+    secondary900: '$plum9',
+    secondary1000: '$plum10',
 
-    accent300: '$violetDark3',
-    accent400: '$violetDark4',
-    accent500: '$violetDark5',
-    accent600: '$violetDark6',
-    accent700: '$violetDark7',
-    accent800: '$violetDark8',
-    accent900: '$violetDark9',
-    accent1000: '$violetDark10',
+    accent300: '$violet3',
+    accent400: '$violet4',
+    accent500: '$violet5',
+    accent600: '$violet6',
+    accent700: '$violet7',
+    accent800: '$violet8',
+    accent900: '$violet9',
+    accent1000: '$violet10',
 
-    gray300: '$mauveDark3',
-    gray400: '$mauveDark4',
-    gray500: '$mauveDark5',
-    gray600: '$mauveDark6',
-    gray700: '$mauveDark7',
-    gray800: '$mauveDark8',
-    gray900: '$mauveDark9',
-    gray1000: '$mauveDark10',
+    gray300: '$mauve3',
+    gray400: '$mauve4',
+    gray500: '$mauve5',
+    gray600: '$mauve6',
+    gray700: '$mauve7',
+    gray800: '$mauve8',
+    gray900: '$mauve9',
+    gray1000: '$mauve10',
   },
 });
