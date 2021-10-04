@@ -9,6 +9,10 @@ import {
   amber,
   orange,
   sand,
+  mauveDark,
+  crimsonDark,
+  plumDark,
+  violetDark,
 } from '@radix-ui/colors';
 import type * as Stitches from '@stitches/react';
 
@@ -171,7 +175,7 @@ export const {
 
 export type CSS = Stitches.CSS<typeof config>;
 
-export const newTheme = createTheme('new-theme', {
+export const sandTheme = createTheme('sand-theme', {
   colors: {
     ...sand,
     ...yellow,
@@ -218,13 +222,71 @@ export const newTheme = createTheme('new-theme', {
     accent900: '$orange9',
     accent1000: '$orange10',
 
-    gray300: '$slate3',
-    gray400: '$slate4',
-    gray500: '$slate5',
-    gray600: '$slate6',
-    gray700: '$slate7',
-    gray800: '$slate8',
-    gray900: '$slate9',
-    gray1000: '$slate10',
+    gray300: '$sand3',
+    gray400: '$sand4',
+    gray500: '$sand5',
+    gray600: '$sand6',
+    gray700: '$sand7',
+    gray800: '$sand8',
+    gray900: '$sand9',
+    gray1000: '$sand10',
+  },
+});
+
+export const darkTheme = createTheme('dark-theme', {
+  colors: {
+    ...mauveDark,
+    ...crimsonDark,
+    ...plumDark,
+    ...violetDark,
+    // app backgrounds
+    bg100: '$mauveDark1',
+    bg200: '$mauveDark2',
+
+    // normal, hover, pressed states
+    // scale to 4 -> 5 -> 6 if CTA
+    primary300: '$crimsonDark3',
+    primary400: '$crimsonDark4',
+    primary500: '$crimsonDark5',
+
+    // border colors: disabled, interactive, and hover
+    primary600: '$crimsonDark6',
+    primary700: '$crimsonDark7',
+    primary800: '$crimsonDark8',
+
+    // solid background + hover state
+    primary900: '$crimsonDark9',
+    primary1000: '$crimsonDark10',
+
+    // low contrast and high contrast text
+    lowContrastText: '$mauveDark11',
+    highContrastText: '$mauveDark12',
+
+    secondary300: '$plumDark3',
+    secondary400: '$plumDark4',
+    secondary500: '$plumDark5',
+    secondary600: '$plumDark6',
+    secondary700: '$plumDark7',
+    secondary800: '$plumDark8',
+    secondary900: '$plumDark9',
+    secondary1000: '$plumDark10',
+
+    accent300: '$violetDark3',
+    accent400: '$violetDark4',
+    accent500: '$violetDark5',
+    accent600: '$violetDark6',
+    accent700: '$violetDark7',
+    accent800: '$violetDark8',
+    accent900: '$violetDark9',
+    accent1000: '$violetDark10',
+
+    gray300: '$mauveDark3',
+    gray400: '$mauveDark4',
+    gray500: '$mauveDark5',
+    gray600: '$mauveDark6',
+    gray700: '$mauveDark7',
+    gray800: '$mauveDark8',
+    gray900: '$mauveDark9',
+    gray1000: '$mauveDark10',
   },
 });
