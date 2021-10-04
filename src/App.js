@@ -9,13 +9,22 @@ import { Button } from './components/Button';
 
 const RootContainer = styled('div', {
   minHeight: '100vh',
-  backgroundColor: '$bg200',
-  maxWidth: '480px',
-  mx: 'auto',
+  height: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundColor: '$bg100',
+  color: '$highContrast',
 });
 
 const Container = styled('div', {
-  backgroundColor: '$primary600',
+  maxWidth: '480px',
+  width: '100%',
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  mx: 'auto',
+  backgroundColor: '$bg200',
 });
 
 const THEME = {
@@ -44,16 +53,40 @@ const App = () => {
       <Container
         css={{
           display: 'flex',
-          flexDirection: 'column',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
           justifyContent: 'center',
           alignItems: 'center',
           height: '100%',
         }}
       >
-        <Button size='lg' variant='primary' onClick={changeTheme}>
-          Theme Switch
+        <Button onClick={changeTheme}>Theme Switch</Button>
+        <Button>Button</Button>
+        <Button color='primary' type='emotion' shape='soft'>
+          Button
         </Button>
-        <Button size='lg' variant='secondary'>
+        <Button color='secondary' type='emotion' shape='soft'>
+          Button
+        </Button>
+        <Button color='accent' type='emotion' shape='soft'>
+          Button
+        </Button>
+        <Button color='primary' type='emotion' shape='square'>
+          Button
+        </Button>
+        <Button color='secondary' type='emotion' shape='square'>
+          Button
+        </Button>
+        <Button color='accent' type='emotion' shape='square'>
+          Button
+        </Button>
+        <Button color='primary' type='emotion' shape='pill'>
+          Button
+        </Button>
+        <Button color='secondary' type='emotion' shape='pill'>
+          Button
+        </Button>
+        <Button color='accent' type='emotion' shape='pill'>
           Button
         </Button>
       </Container>

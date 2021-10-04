@@ -203,8 +203,8 @@ export const sandTheme = createTheme('sand-theme', {
     primary1000: '$yellow10',
 
     // low contrast and high contrast text
-    lowContrastText: '$sand11',
-    highContrastText: '$sand12',
+    lowContrast: '$sand11',
+    highContrast: '$sand12',
 
     secondary300: '$amber3',
     secondary400: '$amber4',
@@ -262,8 +262,8 @@ export const darkTheme = createTheme('dark-theme', {
     primary1000: '$crimson10',
 
     // low contrast and high contrast text
-    lowContrastText: '$mauve11',
-    highContrastText: '$mauve12',
+    lowContrast: '$mauve11',
+    highContrast: '$mauve12',
 
     secondary300: '$plum3',
     secondary400: '$plum4',
